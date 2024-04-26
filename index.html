@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset/reset.css">
+    <link rel="stylesheet" href="index.css">
+    
+
+    <title>Lista</title>
+</head>
+<body>
+    <main> 
+
+        <section class="modalInvisilvel" id="modalInvisilvelAdcionar" style="display: none;">
+            
+        </section>
+        <section class="modalCorpo" id="modalCorpoAdicinar">
+            <form>
+                <input type="text" name="nome" id="nome" placeholder="Produto" required>
+                <input type="number" name="quantidade" id="quantidade" placeholder="quantidade" value="0" checked min="1" required> 
+                <input type="number" name="valor" id="valor" value="0.00" placeholder="valor" required>
+                <input type="submit" value="adicionar" id="adicionar">
+                <input type="button" value="Excluir" id="excluir">
+                
+            </form>
+        </section>
+
+
+        <section class="modalInvisilvel" id="modalInvisilvelEditar" style="display: none;">
+            
+        </section>
+        <section class="modalCorpo" id="modalCorpoEditar">
+            <form>
+                <input type="text" name="nome" id="nome" placeholder="Produto" required>
+                <input type="number" name="quantidade" id="quantidade" placeholder="quantidade" value="0" checked min="1" required> 
+                <input type="number" name="valor" id="valor" value="0.00" placeholder="valor" required>
+                <input type="submit" value="Editar" id="Editar">
+                <input type="button" value="Excluir" id="excluir">
+                
+            </form>
+        </section>
+        
+        <section class="lista">
+            <button id="ModalAdcionar" type="button"> Adcionar  </button>
+            <button id="ModalEditar" type="button"> Editar </button>
+            <section class="listaProduto">
+                <li>
+                    <ul> 
+                        <h1> Feijao </h1>
+                        <p> preço: 14 </p>
+                        <p> quantidade: 5</p>
+                        <p>valor total : 70 </p>
+                    </ul>
+                </li>
+            </section>
+        </section>
+    </main>
+</body>
+<script src="javaScript/modal.js"></script>
+</html>
