@@ -31,11 +31,18 @@ class Modal {
     }
 }
 const modalAdicionar = new Modal(document.querySelector("#modalInvisilvelAdcionar"),document.querySelector("#ModalAdcionar"),document.querySelector("#modalCorpoAdicinar")) 
+
 const modalEditar = new Modal(document.querySelector("#modalInvisilvelEditar"),document.querySelector("#ModalEditar"),document.querySelector("#modalCorpoEditar"))
+
+const modalExcluir = new Modal (document.querySelector("#modalInvisilvelExcluir"),document.querySelector("#ModalExcluir"),document.querySelector("#modalCorpoExcluir"))
 
 
 modalAdicionar.escutarBotao()
 modalAdicionar.escutarModal()
+
 modalEditar.escutarBotao()
 modalEditar.escutarModal()
+
+modalExcluir.escutarBotao()
+modalExcluir.escutarModal()
 
