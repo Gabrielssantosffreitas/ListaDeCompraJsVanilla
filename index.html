@@ -4,8 +4,14 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset/reset.css">
-    <link rel="stylesheet" href="index.css">
+    
+      
+    <link rel="stylesheet" href="css/reset/reset.css">
+    <link rel="stylesheet" href="css/modal/modal.css">
+    <link rel="stylesheet" href="css/lista/lista.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+
     
 
     <title>Lista</title>
@@ -17,11 +23,11 @@
             
         </section>
         <section class="modalCorpo" id="modalCorpoAdicinar">
-            <form>
-                <input type="text" name="nome" id="nomeAdicionar" placeholder="Produto" required>
-                <input type="number" name="quantidade" id="quantidadeAdiconar" placeholder="quantidade" value="0" checked min="1" required> 
-                <input type="number" name="valor" id="valorAdicionar" value="0.00" placeholder="valor" required>
-                <input type="submit" value="adicionar" id="adicionar">
+            <form class="modalForm">
+                <input class="modalInput" type="text" name="nome" id="nomeAdicionar" placeholder="Produto" required>
+                <input class="modalInput" type="number" name="quantidade" id="quantidadeAdiconar" placeholder="quantidade" value="0" checked min="1" required> 
+                <input class="modalInput" type="number" name="valor" id="valorAdicionar" value="0.00" placeholder="valor" required>
+                <input class="modalInput" type="submit" value="adicionar" id="adicionar">
                 <i
                 
             </form>
@@ -32,11 +38,11 @@
             
         </section>
         <section class="modalCorpo" id="modalCorpoEditar">
-            <form>
-                <input type="text" name="nome" id="nome" placeholder="Produto" required>
-                <input type="number" name="quantidade" id="quantidade" placeholder="quantidade" value="0" checked min="1" required> 
-                <input type="number" name="valor" id="valor" value="0.00" placeholder="valor" required>
-                <input type="submit" value="Editar" id="Editar">
+            <form  class="modalForm">
+                <input  class="modalInput" type="text" name="nome" id="nome" placeholder="Produto" required>
+                <input  class="modalInput" type="number" name="quantidade" id="quantidade" placeholder="quantidade" value="0" checked min="1" required> 
+                <input  class="modalInput" type="number" name="valor" id="valor" value="0.00" placeholder="valor" required>
+                <input  class="modalInput" type="submit" value="Editar" id="Editar">
            
                 
             </form>
@@ -50,17 +56,17 @@
             
         </section>
     <section class="modalCorpo" id="modalCorpoExcluir">
-        <form>
-            <input type="text" name="nome" id="nomeExcluir" placeholder="Produto" required>
-            <input type="button" value="Excluir" id="excluir">
+        <form class="modalForm">
+            <input class="modalInput"  type="text" name="nome" id="nomeExcluir" placeholder="Produto" required>
+            <input class="modalInput"  type="button" value="Excluir" id="excluir">
             
         </form>
     </section>
         
         <section class="lista">
-            <button id="ModalAdcionar" type="button"> Adcionar  </button>
-            <button id="ModalEditar" type="button"> Editar </button>
-            <button id="ModalExcluir" type="button"> Excluir</button>
+            <button class="listaBotao" id="ModalAdcionar" type="button"> Adcionar  </button>
+            <button class="listaBotao" id="ModalEditar" type="button"> Editar </button>
+            <button class="listaBotao" id="ModalExcluir" type="button"> Excluir</button>
             <section class="listaProduto">
                 <ul id="tela">
                     

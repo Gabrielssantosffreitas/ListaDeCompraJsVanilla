@@ -1,0 +1,34 @@
+.lista{
+    width: 80%;
+    background-color: #F2762E;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.514);
+    
+}
+.listaBotao{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #A61103;
+    color: white;
+
+
+}
+.listaItemProduto{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+.listaItemProdutoTitulo{
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+.listaItem{
+    margin: 4rem 0 ;
+    
+}

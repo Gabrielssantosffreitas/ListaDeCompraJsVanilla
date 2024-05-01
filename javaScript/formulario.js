@@ -88,11 +88,11 @@ class Lista {
         tela.innerHTML = ""
         this.#lista.forEach(item => {
             tela.innerHTML = tela.innerHTML + ` 
-            <li> 
-            <h3> ${item.nome}</h3>
-            <p>${item.quantidade}</p>
-                <p> ${item.preço}</p>
-                <p> ${item.valorTotal}</p>    
+            <li class="listaItem"> 
+            <h2 class="listaItemProdutoTitulo"> Produto: ${item.nome}</h2>
+            <p class="listaItemProduto" >Quantidade: ${item.quantidade}</p>
+                <p class="listaItemProduto"> Preço: ${item.preço}  R$ </p>
+                <p class="listaItemProduto"> Valor Total ${item.valorTotal} R$</p>   
             </li>`
         });
         
