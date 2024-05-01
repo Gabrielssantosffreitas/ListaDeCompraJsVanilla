@@ -83,7 +83,8 @@ class Lista {
 
     }
     //  ler 
-    ler(){
+    ler()
+    {
         const tela = document.querySelector(this.#tela) 
         tela.innerHTML = ""
         this.#lista.forEach(item => {
@@ -102,10 +103,27 @@ class Lista {
 
     }
 
-    // editarle)
+    // editar
+    editar(nome,quantidade,preço)
+    { 
+        this.#lista.forEach( produto => {
+            if(produto.nome === nome)
+            {
+                
+                produto.quantidade = quantidade
+                produto.preço = preço
+                produto.valorTotal = parseFloat(produto.quantidade*produto.preço).toFixed(2)
+            }
+            
+            
+        });
+        this.#lista = newLista
+        this.#atualisar()
+    }
 
     // remover
-    remover(nome){
+    remover(nome)
+    {
        const newLista =  this.#lista.filter((item) => item.nome !== nome)
        this.#lista = newLista
        this.#atualisar()
@@ -117,6 +135,7 @@ class Lista {
 const listaDeCompras = new Lista("#tela")
 
 const adicionar  = new Formulario("#adicionar","#nomeAdicionar","#quantidadeAdiconar","#valorAdicionar")
+const aditar = new Formulario("#Editar", "#nomeEditar","#quantidadeEditar","valorEditar")
 const excluir = new Formulario("#excluir","#nomeExcluir")
 
 
@@ -127,4 +146,9 @@ excluir.escutarBotao( nome =>{
 })
 adicionar.escutarBotao((nome,quantidade,preço)=>{ 
     listaDeCompras.criar(nome,quantidade,preço)
+})
+aditar.escutarBotao((nome,quantidade,preço)=>{
+    console.log(nome,quantidade,preço)
+    console.log("editar")
+    listaDeCompras.editar(nome,quantidade,preço)
 })
