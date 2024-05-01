@@ -107,9 +107,11 @@ class Lista {
     editar(nome,quantidade,preço)
     { 
         const newArray = []
+
         this.#lista.forEach( produto => {
-            if(produto.nome === nome)
-            {
+            if(produto.nome == nome)
+            {   console.log("if")
+                console.log(produto)
                 
                 produto.quantidade = quantidade
                 produto.preço = preço
@@ -117,13 +119,14 @@ class Lista {
                 newArray.push(produto)
             }
             else{
+                console.log(produto)
                 newArray.push(produto)
             }
-            
+            console.log(newArray)
             this.#lista = newArray
             this.#atualisar()
             
-        });
+        });z
       
     }
 
