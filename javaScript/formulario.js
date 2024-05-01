@@ -106,6 +106,7 @@ class Lista {
     // editar
     editar(nome,quantidade,preço)
     { 
+        const newArray = []
         this.#lista.forEach( produto => {
             if(produto.nome === nome)
             {
@@ -113,12 +114,17 @@ class Lista {
                 produto.quantidade = quantidade
                 produto.preço = preço
                 produto.valorTotal = parseFloat(produto.quantidade*produto.preço).toFixed(2)
+                newArray.push(produto)
+            }
+            else{
+                newArray.push(produto)
             }
             
+            this.#lista = newArray
+            this.#atualisar()
             
         });
-        this.#lista = newLista
-        this.#atualisar()
+      
     }
 
     // remover
@@ -135,7 +141,7 @@ class Lista {
 const listaDeCompras = new Lista("#tela")
 
 const adicionar  = new Formulario("#adicionar","#nomeAdicionar","#quantidadeAdiconar","#valorAdicionar")
-const aditar = new Formulario("#Editar", "#nomeEditar","#quantidadeEditar","valorEditar")
+const aditar = new Formulario("#Editar", "#nomeEditar","#quantidadeEditar","#valorEditar")
 const excluir = new Formulario("#excluir","#nomeExcluir")
 
 
@@ -149,6 +155,5 @@ adicionar.escutarBotao((nome,quantidade,preço)=>{
 })
 aditar.escutarBotao((nome,quantidade,preço)=>{
     console.log(nome,quantidade,preço)
-    console.log("editar")
     listaDeCompras.editar(nome,quantidade,preço)
 })
