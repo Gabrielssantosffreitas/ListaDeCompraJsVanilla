@@ -28,6 +28,8 @@ class Formulario  {
             const nome = this.#nome.value
             const quantidade = parseInt( this.#quantidade.value)
             const preço =  parseFloat(this.#preço.value).toFixed(2)
+            
+            
 
             this.#nome.value = ""
             this.#quantidade.value = ""
@@ -67,6 +69,7 @@ class Lista {
         localStorage.setItem("lista",JSON.stringify(this.#lista))
         this.ler()
         console.log("atualisar")
+        this.valorTotal()
 
     }
 
@@ -85,6 +88,7 @@ class Lista {
     //  ler 
     ler()
     {
+        this.valorTotal()
         const tela = document.querySelector(this.#tela) 
         tela.innerHTML = ""
         this.#lista.forEach(item => {
@@ -102,7 +106,16 @@ class Lista {
         
 
     }
-
+    //valor Total 
+    valorTotal()
+    {
+        const totalHtml = document.querySelector("#total")
+        let total = 0
+        this.#lista.forEach(i => { 
+            total = total + parseFloat(i.valorTotal)
+        })
+        totalHtml.innerHTML = `Total: ${total.toFixed(2)} R$`
+    }
     // editar
     editar(nome,quantidade,preço)
     { 
@@ -126,7 +139,7 @@ class Lista {
             this.#lista = newArray
             this.#atualisar()
             
-        });z
+        })
       
     }
 
@@ -149,6 +162,7 @@ const excluir = new Formulario("#excluir","#nomeExcluir")
 
 
 listaDeCompras.ler()
+
 
 excluir.escutarBotao( nome =>{
     listaDeCompras.remover(nome)
