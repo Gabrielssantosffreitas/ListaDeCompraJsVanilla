@@ -102,7 +102,7 @@ class Lista {
 
     }
 
-    // editar)
+    // editarle)
 
     // remover
     remover(nome){
