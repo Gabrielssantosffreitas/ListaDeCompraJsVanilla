@@ -50,7 +50,7 @@ class Formulario  {
 }
 
 class Lista {
-    #lista = JSON.parse(localStorage.getItem("lista")) || []
+    #lista = JSON.parse(sessionStorage.getItem("lista")) || []
     #tela
    
     constructor(tela)
@@ -66,7 +66,7 @@ class Lista {
     // autualisar
     #atualisar()
     {
-        localStorage.setItem("lista",JSON.stringify(this.#lista))
+        sessionStorage.setItem("lista",JSON.stringify(this.#lista))
         this.ler()
         console.log("atualisar")
         this.valorTotal()
